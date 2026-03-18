@@ -27,6 +27,7 @@ h2{
 /* Each field group */
 .input-group{
     width: 30%;
+    margin-bottom: 10px;
 }
 
 label{
@@ -47,16 +48,28 @@ input, select, textarea{
 .radio-group label {
   display: flex;
   align-items: center;
-  gap: 160px;
-  margin-bottom: 2px; /* space between options */
+  gap: 8px;
+  margin-bottom: 2px;/* space between options */
 }
 
 .checkbox-group label {
   display: flex;
   align-items: center; /* vertically centers checkbox with text */
-  gap: 5px; /* space between checkbox and text */
+  gap: 8px; /* space between checkbox and text */
 }
 
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.my-textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    resize: vertical;
+}
 /* Buttons */
 .buttons{
     text-align: center;
