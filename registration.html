@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registrationstyle.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+
+    <form>
+
+        <!-- Row 1 -->
+        <div class="row">
+            <div class="input-group">
+                <label>First Name</label>
+                <input type="text">
+            </div>
+
+            <div class="input-group">
+                <label>Last Name</label>
+                <input type="text">
+            </div>
+
+            <div class="input-group">
+                <label>Department</label>
+                <select>
+                    <option>Computer Science</option>
+                    <option>Software Engineering</option>
+                    <option>Power and Control</option>
+                    <option>Communication</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row">
+
+            <div class="input-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Hobbies</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="hobby1"> Reading</label>
+                    <label><input type="checkbox" name="hobby2"> Sports</label>
+                    <label><input type="checkbox" name="hobby3"> Music</label>
+                    <label><input type="checkbox" name="hobby4"> Travel</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Others</label>
+                <textarea rows="4"></textarea>
+            </div>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button class="register-btn">Register</button>
+            <button type="reset" class="clear-btn">Clear</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
