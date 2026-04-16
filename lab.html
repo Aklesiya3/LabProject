@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>javascript test</title>
+</head>
+<body>
+    <script>
+var thinkingOf;
+var guess;
+
+thinkingOf = Math.ceil(Math.random() * 1000);
+
+guess = prompt("I'm thinking of a number between 1 and 1000. What is it?", "");
+
+while (guess != thinkingOf) {
+    if (guess < thinkingOf) {
+        guess = prompt("Your guess was too low. Guess again.", "");
+    } else {
+        guess = prompt("Your guess was too high. Guess again.", "");
+    }
+}
+
+window.alert(guess + " is correct!");
+</script>
+</body>
+</html>

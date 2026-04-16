@@ -4,7 +4,7 @@ body{
 }
 
 .container{
-    width: 800px;
+    width: 1000px;
     margin: 80px auto;
     padding: 30px;
     background: #f9f9f9;
@@ -24,9 +24,8 @@ h2{
     margin-bottom: 20px;
 }
 
-/* Each field group */
 .input-group{
-    width: 30%;
+    width: 20%;
     margin-bottom: 10px;
 }
 
@@ -36,26 +35,24 @@ label{
     font-weight: bold;
 }
 
-/* Inputs */
-input, select, textarea{
+input, select{
     width: 100%;
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
-/* Radio & checkbox spacing */
 .radio-group label {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 2px;/* space between options */
+  margin-bottom: 2px;
 }
 
 .checkbox-group label {
   display: flex;
-  align-items: center; /* vertically centers checkbox with text */
-  gap: 8px; /* space between checkbox and text */
+  align-items: center; 
+  gap: 8px; 
 }
 
 .form-grid {
@@ -70,7 +67,7 @@ input, select, textarea{
     box-sizing: border-box;
     resize: vertical;
 }
-/* Buttons */
+
 .buttons{
     text-align: center;
     margin-top: 20px;

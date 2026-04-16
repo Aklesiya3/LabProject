@@ -10,23 +10,27 @@
 <div class="container">
     <h2>Registration Form</h2>
 
-    <form>
-
-        <!-- Row 1 -->
+    <form action="process.php" method="POST" onsubmit="return validateAge()">
+       <!-- Row 1 -->
         <div class="row">
             <div class="input-group">
                 <label>First Name</label>
-                <input type="text">
+                <input type="text" name="fname" >
             </div>
 
             <div class="input-group">
                 <label>Last Name</label>
-                <input type="text">
+                <input type="text" name="lname">
+            </div>
+
+            <div class="input-group">
+                <label>Birth Date</label>
+                 <input type="date" name="birthday" id="birthday">
             </div>
 
             <div class="input-group">
                 <label>Department</label>
-                <select>
+                <select name="department">
                     <option>Computer Science</option>
                     <option>Software Engineering</option>
                     <option>Power and Control</option>
@@ -36,8 +40,6 @@
         </div>
 
         <!-- Row 2 -->
-
-        <from>
 
             <div class="form-grid">
 
@@ -53,27 +55,57 @@
             <div class="input-group">
                 <label>Hobbies</label>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="hobby1"> Reading</label>
-                    <label><input type="checkbox" name="hobby2"> Sports</label>
-                    <label><input type="checkbox" name="hobby3"> Music</label>
-                    <label><input type="checkbox" name="hobby4"> Travel</label>
+                    <label><input type="checkbox" name="hobbies[]" value="Reading"> Reading</label>
+                    <label><input type="checkbox" name="hobbies[]" value="Sports"> Sports</label>
+                    <label><input type="checkbox" name="hobbies[]" value="Music"> Music</label>
+                    <label><input type="checkbox" name="hobbies[]" value="Travel"> Travel</label>
                 </div>
             </div>
         
 
             <div class="input-group">
                 <label>Others</label>
-                <textarea class="my-textarea" cols="4"></textarea>
+                <textarea class="my-textarea" rows="4"> name="others" </textarea>
             </div>
     </div>
+    <p id="errorMsg" style="color:red;"></p>
     <!-- Buttons -->
         <div class="buttons">
-            <button class="register-btn">Register</button>
+            <button type="submit" class="register-btn">Register</button>
             <button type="reset" class="clear-btn">Clear</button>
         </div>
     </form>
 
 </div>
+<script>
+function validateAge() {
+    let birthDate = document.getElementById("birthday").value;
+    let errorMsg = document.getElementById("errorMsg");
 
+    errorMsg.textContent = "";
+
+    if (birthDate === "") {
+        errorMsg.textContent = "Please select your birth date";
+        return false;
+    }
+
+    let today = new Date();
+    let dob = new Date(birthDate);
+
+    let age = today.getFullYear() - dob.getFullYear();
+    let m = today.getMonth() - dob.getMonth();
+
+    if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+        age--;
+    }
+
+    if (age < 18) {
+        errorMsg.textContent = "You must be at least 18 years old.";
+        return false;
+    }
+
+    return true;
+}
+</script>
 </body>
 </html>
