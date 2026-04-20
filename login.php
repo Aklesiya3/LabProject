@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-$correct_username = "beimni";
-$correct_password = "2314";
+$correct_username = "Aster";
+$correct_password = "1234";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user"] = $username;
 
         // redirect to dashboard
-        header("Location: dashboard.php");
+        header("Location: logindashboard.php");
         exit();
 
     } else {
